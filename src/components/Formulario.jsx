@@ -28,8 +28,6 @@ const Formulario = ({ pacientes, setPacientes,paciente,setPaciente }) => {
     setError(false)
     return false
   }
-  const mensajeError = "Todos los campos son obligatorios"
-
   const generarId=()=>{
     let numeroRandom=Math.random().toString(36).substring(2)
     let fecha=Date.now().toString(36)
@@ -95,7 +93,7 @@ const Formulario = ({ pacientes, setPacientes,paciente,setPaciente }) => {
           //si error es true,manda el mensaje de error
           error && (
             <Error>
-              <p>mensajeError</p>
+              <p>Todos los campos son obligatorios</p>
             </Error>
           )
         }
